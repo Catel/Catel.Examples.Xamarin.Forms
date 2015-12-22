@@ -43,6 +43,7 @@
     <Compile Include="Services\Interfaces\IGitterService.cs" />
     <Compile Include="Services\Interfaces\ICredentialStore.cs" />
     <Compile Include="AppInfo.cs" />
+    <Compile Include="Models\RoomInfo.cs" />
     <Compile Include="ViewModels\AuthenticationPageViewModel.cs" />
     <Compile Include="AuthorizationFlowWellKnownUrls.cs" />
     <Compile Include="Messages.cs" />

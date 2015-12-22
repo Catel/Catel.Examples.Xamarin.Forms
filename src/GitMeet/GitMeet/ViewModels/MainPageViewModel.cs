@@ -1,5 +1,7 @@
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Catel;
+using Catel.Collections;
 using Catel.Data;
 using Catel.MVVM;
 using Catel.Services;
@@ -12,13 +14,21 @@ namespace GitMeet.ViewModels
     /// </summary>
     public class MainPageViewModel : ViewModelBase
     {
-        /// <summary>Register the UserInfo property so it is known in the class.</summary>
-        public static readonly PropertyData UserInfoProperty =
-            RegisterProperty<MainPageViewModel, UserInfo>(model => model.UserInfo);
-
         /// <summary>Register the AvatarUrlMedium property so it is known in the class.</summary>
         public static readonly PropertyData AvatarUrlMediumProperty =
             RegisterProperty<MainPageViewModel, string>(model => model.AvatarUrlMedium);
+
+        /// <summary>Register the UserInfo property so it is known in the class.</summary>
+        public static readonly PropertyData UserInfoProperty =
+            RegisterProperty<MainPageViewModel, UserInfo>(model => model.UserInfo, default(UserInfo),
+                (s, e) => s.OnUserInfoChanged(e));
+
+        /// <summary>Register the DisplayName property so it is known in the class.</summary>
+        public static readonly PropertyData DisplayNameProperty =
+            RegisterProperty<MainPageViewModel, string>(model => model.DisplayName);
+
+        /// <summary>Register the Rooms property so it is known in the class.</summary>
+        public static readonly PropertyData RoomsProperty = RegisterProperty<MainPageViewModel, ObservableCollection<RoomInfo>>(model => model.Rooms, () => new ObservableCollection<RoomInfo>());
 
         /// <summary>
         /// </summary>
@@ -31,6 +41,8 @@ namespace GitMeet.ViewModels
         /// <summary>
         /// </summary>
         private readonly INavigationService _navigationService;
+
+        private string _accessToken;
 
 
         /// <summary>
@@ -60,26 +72,32 @@ namespace GitMeet.ViewModels
             set { SetValue(UserInfoProperty, value); }
         }
 
-        /// <summary>Register the DisplayName property so it is known in the class.</summary>
-        public static readonly PropertyData DisplayNameProperty = RegisterProperty<MainPageViewModel, string>(model => model.DisplayName);
-
         [ViewModelToModel("UserInfo")]
         public string DisplayName
         {
-            get {
-                return GetValue<string>(DisplayNameProperty);
-            }
-            set {
-                SetValue(DisplayNameProperty, value);
-            }
+            get { return GetValue<string>(DisplayNameProperty); }
+            set { SetValue(DisplayNameProperty, value); }
         }
 
+        public ObservableCollection<RoomInfo> Rooms
+        {
+            get { return GetValue<ObservableCollection<RoomInfo>>(RoomsProperty); }
+            set { SetValue(RoomsProperty, value); }
+        }
 
         [ViewModelToModel("UserInfo")]
         public string AvatarUrlMedium
         {
             get { return GetValue<string>(AvatarUrlMediumProperty); }
             set { SetValue(AvatarUrlMediumProperty, value); }
+        }
+
+        /// <summary>Occurs when the value of the UserInfo property is changed.</summary>
+        /// <param name="e">The event argument</param>
+        private async void OnUserInfoChanged(AdvancedPropertyChangedEventArgs e)
+        {
+            this.Rooms.Clear();
+            this.Rooms.AddRange(await _gitterService.GetRooms(_accessToken));
         }
 
 
@@ -91,14 +109,14 @@ namespace GitMeet.ViewModels
 
         private async void Execute()
         {
-            var accessToken = _credentialStore.ReadToken();
-            if (accessToken == null)
+            _accessToken = _credentialStore.ReadToken();
+            if (_accessToken == null)
             {
                 _navigationService.Navigate<AuthenticationPageViewModel>();
             }
             else
             {
-                UserInfo = await _gitterService.GetUserInfo(accessToken);
+                UserInfo = await _gitterService.GetUserInfo(_accessToken);
             }
         }
     }

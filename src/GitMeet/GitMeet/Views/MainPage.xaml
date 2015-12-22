@@ -22,10 +22,16 @@
             </OnPlatform>
         </abstractions:CircleImage.HeightRequest>
     </abstractions:CircleImage>
-    <Entry Text="{Binding DisplayName}" TextColor="White"></Entry>
-  </StackLayout>
-  <!--
-  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
-  -->
+    
+    <Entry Text="{Binding DisplayName}" TextColor="White"/>
 
+    <ListView x:Name="RoomListView" ItemsSource="{Binding Rooms}">
+     <ListView.ItemTemplate>
+        <DataTemplate>
+            <TextCell Text="{Binding Name}" />
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  
+  </StackLayout>
 </catel:ContentPage>
