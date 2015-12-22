@@ -1,6 +1,10 @@
-﻿namespace GitMeet.Services.Interfaces
+﻿using System.Threading.Tasks;
+using GitMeet.Models;
+
+namespace GitMeet.Services.Interfaces
 {
     public interface IGitterService
     {
+        Task<UserInfo> GetUserInfo(string token);
     }
 }

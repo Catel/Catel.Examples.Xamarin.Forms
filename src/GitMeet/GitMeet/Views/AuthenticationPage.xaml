@@ -3,6 +3,6 @@
                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                       xmlns:catel="clr-namespace:Catel.Windows.Controls;assembly=Catel.MVVM"
                       xmlns:gitmeet="clr-namespace:GitMeet.Controls;assembly=GitMeet"
-                      x:Class="GitMeet.Views.AuthenticationPage">
-    <gitmeet:WebView Url="{Binding Path=Url, Mode=TwoWay}"/>
+                   x:Class="GitMeet.Views.AuthenticationPage">
+    <gitmeet:WebView Url="{Binding Path=Url, Mode=TwoWay}" IsVisible="{Binding IsWebViewVisible}"/>
 </catel:ContentPage>
