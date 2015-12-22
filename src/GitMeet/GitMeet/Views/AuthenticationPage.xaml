@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<catel:ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                      xmlns:catel="clr-namespace:Catel.Windows.Controls;assembly=Catel.MVVM"
+                      xmlns:gitmeet="clr-namespace:GitMeet.Controls;assembly=GitMeet"
+                      x:Class="GitMeet.Views.AuthenticationPage">
+    <gitmeet:WebView Url="{Binding Path=Url, Mode=TwoWay}"/>
+</catel:ContentPage>
