@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitMeet.Droid", "GitMeet\GitMeet.Droid\GitMeet.Droid.csproj", "{37598067-C97E-483A-B9A0-BD735F370227}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitMeet.Droid", "GitMeet.Droid\GitMeet.Droid.csproj", "{37598067-C97E-483A-B9A0-BD735F370227}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitMeet.iOS", "GitMeet\GitMeet.iOS\GitMeet.iOS.csproj", "{AD41603D-F7F4-4CA4-A5D3-231F8291F5E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitMeet.iOS", "GitMeet.iOS\GitMeet.iOS.csproj", "{AD41603D-F7F4-4CA4-A5D3-231F8291F5E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitMeet.WinPhone", "GitMeet\GitMeet.WinPhone\GitMeet.WinPhone.csproj", "{B71D0941-2CAB-4138-9895-08C0C8CDD8DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitMeet.WinPhone", "GitMeet.WinPhone\GitMeet.WinPhone.csproj", "{B71D0941-2CAB-4138-9895-08C0C8CDD8DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitMeet", "GitMeet\GitMeet\GitMeet.csproj", "{EEDF5C25-E88B-485E-8817-4A269F07AF34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitMeet", "GitMeet\GitMeet.csproj", "{EEDF5C25-E88B-485E-8817-4A269F07AF34}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitMeet", "GitMeet", "{B196B6A0-3687-4CF0-A869-DCBB36619252}"
 EndProject
