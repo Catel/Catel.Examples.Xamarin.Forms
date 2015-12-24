@@ -13,6 +13,7 @@
                 <OnPlatform.WinPhone>75</OnPlatform.WinPhone>
             </OnPlatform>
         </abstractions:CircleImage.WidthRequest>
+      
         <abstractions:CircleImage.HeightRequest>
             <OnPlatform x:TypeArguments="x:Double">
                 <OnPlatform.iOS>55</OnPlatform.iOS>
