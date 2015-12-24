@@ -1,9 +1,16 @@
-﻿using Catel.IoC;
-using GitMeet.Services;
-using GitMeet.Services.Interfaces;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Module.cs" company="Catel development team">
+//   Copyright (c) 2008 - 2015 Catel development team. All rights reserved.
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
+
 
 namespace GitMeet
 {
+    using Catel.IoC;
+    using Services;
+    using Services.Interfaces;
+
     /// <summary>
     /// The module
     /// </summary>

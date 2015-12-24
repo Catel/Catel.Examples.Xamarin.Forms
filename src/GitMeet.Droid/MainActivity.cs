@@ -1,15 +1,17 @@
-﻿using System;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="MainActivity.cs" company="Catel development team">
+//   Copyright (c) 2008 - 2015 Catel development team. All rights reserved.
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
 
-using Android.App;
-using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Android.OS;
-using ImageCircle.Forms.Plugin.Droid;
 
 namespace GitMeet.Droid
 {
+    using Android.App;
+    using Android.Content.PM;
+    using Android.OS;
+    using ImageCircle.Forms.Plugin.Droid;
+
     [Activity(Label = "GitMeet", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
@@ -24,4 +26,3 @@ namespace GitMeet.Droid
         }
     }
 }
-

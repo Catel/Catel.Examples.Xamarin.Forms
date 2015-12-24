@@ -489,11 +489,11 @@ namespace GitMeet.Droid
 			global::Xamarin.Forms.Platform.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::GitMeet.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
 			global::Xamarin.Forms.Platform.Resource.Dimension.design_snackbar_text_size = global::GitMeet.Droid.Resource.Dimension.design_snackbar_text_size;
 			global::Xamarin.Forms.Platform.Resource.Dimension.design_tab_max_width = global::GitMeet.Droid.Resource.Dimension.design_tab_max_width;
-			global::Xamarin.Forms.Platform.Resource.Dimension.design_tab_min_width = global::GitMeet.Droid.Resource.Dimension.design_tab_min_width;
-			global::Xamarin.Forms.Platform.Resource.Dimension.dialog_fixed_height_major = global::GitMeet.Droid.Resource.Dimension.dialog_fixed_height_major;
-			global::Xamarin.Forms.Platform.Resource.Dimension.dialog_fixed_height_minor = global::GitMeet.Droid.Resource.Dimension.dialog_fixed_height_minor;
-			global::Xamarin.Forms.Platform.Resource.Dimension.dialog_fixed_width_major = global::GitMeet.Droid.Resource.Dimension.dialog_fixed_width_major;
-			global::Xamarin.Forms.Platform.Resource.Dimension.dialog_fixed_width_minor = global::GitMeet.Droid.Resource.Dimension.dialog_fixed_width_minor;
+			//global::Xamarin.Forms.Platform.Resource.Dimension.design_tab_min_width = global::GitMeet.Droid.Resource.Dimension.design_tab_min_width;
+			//global::Xamarin.Forms.Platform.Resource.Dimension.dialog_fixed_height_major = global::GitMeet.Droid.Resource.Dimension.dialog_fixed_height_major;
+			//global::Xamarin.Forms.Platform.Resource.Dimension.dialog_fixed_height_minor = global::GitMeet.Droid.Resource.Dimension.dialog_fixed_height_minor;
+			//global::Xamarin.Forms.Platform.Resource.Dimension.dialog_fixed_width_major = global::GitMeet.Droid.Resource.Dimension.dialog_fixed_width_major;
+			//global::Xamarin.Forms.Platform.Resource.Dimension.dialog_fixed_width_minor = global::GitMeet.Droid.Resource.Dimension.dialog_fixed_width_minor;
 			global::Xamarin.Forms.Platform.Resource.Dimension.disabled_alpha_material_dark = global::GitMeet.Droid.Resource.Dimension.disabled_alpha_material_dark;
 			global::Xamarin.Forms.Platform.Resource.Dimension.disabled_alpha_material_light = global::GitMeet.Droid.Resource.Dimension.disabled_alpha_material_light;
 			global::Xamarin.Forms.Platform.Resource.Dimension.highlight_alpha_material_colored = global::GitMeet.Droid.Resource.Dimension.highlight_alpha_material_colored;
@@ -912,7 +912,7 @@ namespace GitMeet.Droid
 			global::Xamarin.Forms.Platform.Resource.Style.Platform_Widget_AppCompat_Spinner = global::GitMeet.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
 			global::Xamarin.Forms.Platform.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::GitMeet.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
 			global::Xamarin.Forms.Platform.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::GitMeet.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
-			global::Xamarin.Forms.Platform.Resource.Style.RtlOverlay_Widget_AppCompat_ActionButton_Overflow = global::GitMeet.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionButton_Overflow;
+			//global::Xamarin.Forms.Platform.Resource.Style.RtlOverlay_Widget_AppCompat_ActionButton_Overflow = global::GitMeet.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionButton_Overflow;
 			global::Xamarin.Forms.Platform.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::GitMeet.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
 			global::Xamarin.Forms.Platform.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::GitMeet.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
 			global::Xamarin.Forms.Platform.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::GitMeet.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
@@ -1187,7 +1187,7 @@ namespace GitMeet.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.DrawerArrowToggle_spinBars = global::GitMeet.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
 			global::Xamarin.Forms.Platform.Resource.Styleable.DrawerArrowToggle_thickness = global::GitMeet.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
 			global::Xamarin.Forms.Platform.Resource.Styleable.FloatingActionButton = global::GitMeet.Droid.Resource.Styleable.FloatingActionButton;
-			global::Xamarin.Forms.Platform.Resource.Styleable.FloatingActionButton_android_background = global::GitMeet.Droid.Resource.Styleable.FloatingActionButton_android_background;
+			//global::Xamarin.Forms.Platform.Resource.Styleable.FloatingActionButton_android_background = global::GitMeet.Droid.Resource.Styleable.FloatingActionButton_android_background;
 			global::Xamarin.Forms.Platform.Resource.Styleable.FloatingActionButton_backgroundTint = global::GitMeet.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
 			global::Xamarin.Forms.Platform.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::GitMeet.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
 			global::Xamarin.Forms.Platform.Resource.Styleable.FloatingActionButton_borderWidth = global::GitMeet.Droid.Resource.Styleable.FloatingActionButton_borderWidth;

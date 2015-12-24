@@ -1,10 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
-<catel:ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<catel:ContentPage x:Class="GitMeet.Views.MainPage"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                    xmlns:catel="clr-namespace:Catel.Windows.Controls;assembly=Catel.MVVM"
-                   xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
-                   x:Class="GitMeet.Views.MainPage">
+                   xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions">
+  
   <StackLayout>
     <abstractions:CircleImage Source="{Binding AvatarUrlMedium}">
         <abstractions:CircleImage.WidthRequest>

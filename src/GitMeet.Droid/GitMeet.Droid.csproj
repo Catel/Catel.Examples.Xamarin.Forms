@@ -48,6 +48,9 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Catel.Core">
+      <HintPath>..\..\..\Catel\output\debug\PCL\Catel.MVVM.Xamarin.Forms\Catel.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Catel.MVVM">
       <HintPath>..\..\..\Catel\output\debug\PCL\Catel.MVVM.Xamarin.Forms\Catel.MVVM.dll</HintPath>
     </Reference>

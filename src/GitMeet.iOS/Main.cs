@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Main.cs" company="Catel development team">
+//   Copyright (c) 2008 - 2015 Catel development team. All rights reserved.
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
 
-using Foundation;
-using UIKit;
 
 namespace GitMeet.iOS
 {
+    using UIKit;
+
     public class Application
     {
         // This is the main entry point of the application.

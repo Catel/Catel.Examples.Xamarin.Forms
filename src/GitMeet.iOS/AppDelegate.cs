@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="AppDelegate.cs" company="Catel development team">
+//   Copyright (c) 2008 - 2015 Catel development team. All rights reserved.
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
 
-using Foundation;
-using ImageCircle.Forms.Plugin.iOS;
-using UIKit;
 
 namespace GitMeet.iOS
 {
+    using Foundation;
+    using ImageCircle.Forms.Plugin.iOS;
+    using UIKit;
+
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.

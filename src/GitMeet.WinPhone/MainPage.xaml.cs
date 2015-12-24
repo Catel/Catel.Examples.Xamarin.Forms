@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Navigation;
-using ImageCircle.Forms.Plugin.WindowsPhone;
-using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="MainPage.xaml.cs" company="Catel development team">
+//   Copyright (c) 2008 - 2015 Catel development team. All rights reserved.
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
+
 
 namespace GitMeet.WinPhone
 {
+    using ImageCircle.Forms.Plugin.WindowsPhone;
+    using Microsoft.Phone.Controls;
+
     public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {
         public MainPage()
