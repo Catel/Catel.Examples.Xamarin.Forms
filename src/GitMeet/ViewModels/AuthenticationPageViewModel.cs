@@ -59,10 +59,10 @@ namespace GitMeet.ViewModels
             set { SetValue(UrlProperty, value); }
         }
 
-        protected override Task Initialize()
+        protected override Task InitializeAsync()
         {
             _navigationService.RemoveBackEntry();
-            return base.Initialize();
+            return base.InitializeAsync();
         }
 
         /// <summary>Occurs when the value of the Url property is changed.</summary>
