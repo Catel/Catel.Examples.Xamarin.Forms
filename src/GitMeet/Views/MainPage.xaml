@@ -2,10 +2,19 @@
                    xmlns="http://xamarin.com/schemas/2014/forms"
                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                    xmlns:catel="clr-namespace:Catel.Windows.Controls;assembly=Catel.MVVM"
+                   xmlns:converters="clr-namespace:Catel.MVVM.Converters;assembly=Catel.MVVM"
                    xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions">
   
+  <catel:ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:BooleanToOppositeBooleanConverter x:Key="BooleanToOppositeBooleanConverter"></converters:BooleanToOppositeBooleanConverter>
+    </ResourceDictionary>
+  </catel:ContentPage.Resources>
+  
   <StackLayout>
-    <abstractions:CircleImage Source="{Binding AvatarUrlMedium}">
+    <!--TODO: Improve this layout-->
+    <ActivityIndicator IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}"  />
+    <abstractions:CircleImage Source="{Binding AvatarUrlMedium}" IsVisible="{Binding IsLoading, Converter={StaticResource BooleanToOppositeBooleanConverter}}">
         <abstractions:CircleImage.WidthRequest>
             <OnPlatform x:TypeArguments="x:Double">
                 <OnPlatform.iOS>55</OnPlatform.iOS>
@@ -13,7 +22,6 @@
                 <OnPlatform.WinPhone>75</OnPlatform.WinPhone>
             </OnPlatform>
         </abstractions:CircleImage.WidthRequest>
-      
         <abstractions:CircleImage.HeightRequest>
             <OnPlatform x:TypeArguments="x:Double">
                 <OnPlatform.iOS>55</OnPlatform.iOS>
@@ -22,16 +30,13 @@
             </OnPlatform>
         </abstractions:CircleImage.HeightRequest>
     </abstractions:CircleImage>
-    
-    <Entry Text="{Binding DisplayName}" TextColor="White"/>
-
-    <ListView x:Name="RoomListView" ItemsSource="{Binding Rooms}">
+    <Entry Text="{Binding DisplayName}" TextColor="White" IsVisible="{Binding IsLoading, Converter={StaticResource BooleanToOppositeBooleanConverter}}"/>
+    <ListView x:Name="RoomListView" ItemsSource="{Binding Rooms}" IsVisible="{Binding IsLoading, Converter={StaticResource BooleanToOppositeBooleanConverter}}">
      <ListView.ItemTemplate>
         <DataTemplate>
             <TextCell Text="{Binding Name}" />
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
-  
   </StackLayout>
 </catel:ContentPage>

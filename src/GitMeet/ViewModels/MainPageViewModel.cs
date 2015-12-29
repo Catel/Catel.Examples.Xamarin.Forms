@@ -1,15 +1,15 @@
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using Catel;
-using Catel.Collections;
-using Catel.Data;
-using Catel.MVVM;
-using Catel.Services;
-using GitMeet.Models;
-using GitMeet.Services.Interfaces;
-
 namespace GitMeet.ViewModels
 {
+    using System.Collections.ObjectModel;
+    using System.Threading.Tasks;
+    using Catel;
+    using Catel.Collections;
+    using Catel.Data;
+    using Catel.MVVM;
+    using Catel.Services;
+    using Models;
+    using Services.Interfaces;
+
     /// <summary>
     /// </summary>
     public class MainPageViewModel : ViewModelBase
@@ -30,6 +30,9 @@ namespace GitMeet.ViewModels
         /// <summary>Register the Rooms property so it is known in the class.</summary>
         public static readonly PropertyData RoomsProperty = RegisterProperty<MainPageViewModel, ObservableCollection<RoomInfo>>(model => model.Rooms, () => new ObservableCollection<RoomInfo>());
 
+        /// <summary>Register the IsLoading property so it is known in the class.</summary>
+        public static readonly PropertyData IsLoadingProperty = RegisterProperty<MainPageViewModel, bool>(model => model.IsLoading, true);
+
         /// <summary>
         /// </summary>
         private readonly ICredentialStore _credentialStore;
@@ -43,7 +46,6 @@ namespace GitMeet.ViewModels
         private readonly INavigationService _navigationService;
 
         private string _accessToken;
-
 
         /// <summary>
         /// </summary>
@@ -63,6 +65,12 @@ namespace GitMeet.ViewModels
             _credentialStore = credentialStore;
             _navigationService = navigationService;
             _gitterService = gitterService;
+        }
+
+        public bool IsLoading
+        {
+            get { return GetValue<bool>(IsLoadingProperty); }
+            set { SetValue(IsLoadingProperty, value); }
         }
 
         [Model]
@@ -96,10 +104,10 @@ namespace GitMeet.ViewModels
         /// <param name="e">The event argument</param>
         private async void OnUserInfoChanged(AdvancedPropertyChangedEventArgs e)
         {
-            this.Rooms.Clear();
-            this.Rooms.AddRange(await _gitterService.GetRooms(_accessToken));
+            Rooms.Clear();
+            Rooms.AddRange(await _gitterService.GetRooms(_accessToken));
+            IsLoading = false;
         }
-
 
         protected override Task InitializeAsync()
         {
