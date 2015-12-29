@@ -18,22 +18,27 @@ namespace GitMeet
         public static class TokenExchangeRequest
         {
             /// <summary>
+            /// The grant type param name.
             /// </summary>
             public const string GrantType = "grant_type";
 
             /// <summary>
+            /// The redirect uri param name.
             /// </summary>
             public const string RedirectUri = "redirect_uri";
 
             /// <summary>
+            /// The code param name.
             /// </summary>
             public const string Code = "code";
 
             /// <summary>
+            /// The client id param name.
             /// </summary>
             public const string ClientId = "client_id";
 
             /// <summary>
+            /// The client secret param name.
             /// </summary>
             public const string ClientSecret = "client_secret";
         }
@@ -43,6 +48,9 @@ namespace GitMeet
         /// </summary>
         public static class TokenExchangeResponse
         {
+            /// <summary>
+            /// The access token param name.
+            /// </summary>
             public const string AccessToken = "access_token";
         }
 
@@ -51,6 +59,9 @@ namespace GitMeet
         /// </summary>
         public static class GrantType
         {
+            /// <summary>
+            /// The authorization code gran type value.
+            /// </summary>
             public const string AuthorizationCode = "authorization_code";
         }
     }
