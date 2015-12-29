@@ -41,7 +41,7 @@
     <Compile Include="App.cs" />
     <Compile Include="AppInfo.sensitive.cs" />
     <Compile Include="Controls\WebView.cs" />
-    <Compile Include="Module.cs" />
+    <Compile Include="ServiceLocatorInitializer.cs" />
     <Compile Include="ModuleInitializer.cs" />
     <Compile Include="Services\GitterService.cs" />
     <Compile Include="Services\CredentialStore.cs" />

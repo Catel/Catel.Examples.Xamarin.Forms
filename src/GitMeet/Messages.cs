@@ -38,11 +38,17 @@ namespace GitMeet
             public const string ClientSecret = "client_secret";
         }
 
+        /// <summary>
+        /// The token exchange response params.
+        /// </summary>
         public static class TokenExchangeResponse
         {
             public const string AccessToken = "access_token";
         }
 
+        /// <summary>
+        /// The grant types.
+        /// </summary>
         public static class GrantType
         {
             public const string AuthorizationCode = "authorization_code";

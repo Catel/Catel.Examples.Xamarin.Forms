@@ -101,10 +101,10 @@ namespace GitMeet.ViewModels
         }
 
 
-        protected override Task Initialize()
+        protected override Task InitializeAsync()
         {
             Execute();
-            return new Task(() => { });
+            return base.InitializeAsync();
         }
 
         private async void Execute()

@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Module.cs" company="Catel development team">
+// <copyright file="ServiceLocatorInitializer.cs" company="Catel development team">
 //   Copyright (c) 2008 - 2015 Catel development team. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
@@ -12,10 +12,27 @@ namespace GitMeet
     using Services.Interfaces;
 
     /// <summary>
-    /// The module
+    /// The service locator initializer.
     /// </summary>
-    public class Module : IServiceLocatorInitializer
+    public class ServiceLocatorInitializer : IServiceLocatorInitializer
     {
+        /// <summary>
+        /// The current <see cref="IServiceLocatorInitializer"/>.
+        /// </summary>
+        private static IServiceLocatorInitializer _current;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private ServiceLocatorInitializer()
+        {
+        }
+
+        /// <summary>
+        /// Gets the current <see cref="IServiceLocatorInitializer"/>.
+        /// </summary>
+        public static IServiceLocatorInitializer Current => _current ?? (_current = new ServiceLocatorInitializer());
+
         /// <summary>
         /// The initialize method.
         /// </summary>
